@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <div >
+   <h1>Registration Success</h1>
+    <span>name :</span><span th:text="${user.firstName}"></span><br>
+    <span>Last Name :</span><span th:text="${user.lastName}"></span><br>
+    <span>Password :</span><span th:text="${user.password}"></span><br>
+    <span>Gender :</span><span th:text="${user.gender}"></span><br>
+    <span>Email :</span><span th:text="${user.email}"></span><br>
+    <span>Security Question :</span><span th:text="${user.securityQuestion}"></span><br>
+    <span>Security Answer :</span><span th:text="${user.securityAnswer}"></span><br>
+
+		  
+  </div>
+
+</body>
+</html>
