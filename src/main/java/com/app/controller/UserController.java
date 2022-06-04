@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.app.common.UserConstant;
 import com.app.entity.AdminQuestions;
+import com.app.entity.QuetionsList;
 import com.app.entity.User;
 import com.app.repository.UserRepository;
 
@@ -104,8 +105,8 @@ public class UserController {
 	
 	@GetMapping("/student")
 	@PreAuthorize("hasAuthority('ROLE_USER')")
-	public String studentUserAccess() {
-		return "User can only access this !";
+	public List<QuetionsList> studentUserAccess() {
+		return Arrays.asList(new QuetionsList("Only Student can access this"));
 		
 	}
 
@@ -113,7 +114,7 @@ public class UserController {
 	@Secured("ROLE_ADMIN")
 	@PreAuthorize("hasAuthority('ROLE_ADMIN')")
 	public List<AdminQuestions> manageQuestions(){
-		return null;
+		return Arrays.asList(new AdminQuestions("Only Admin can access this"));
 	}
 	
 	 

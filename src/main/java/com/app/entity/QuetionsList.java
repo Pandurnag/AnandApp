@@ -1,8 +1,8 @@
 package com.app.entity;
 
-public class AdminQuestions {
+public class QuetionsList {
 
-	public AdminQuestions(String string) {
+	public QuetionsList(String string) {
 		// TODO Auto-generated constructor stub
 	}
 
